@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div class='layout_container'>
+	<div class='layout_head'>
+		<a href='{{page.url}}' target='blank'><h1>{{page.name}}</h1></a>
+		<a href='{{page.review_url}}' target='blank'>Review</a>
+	</div>
+	<div class='layout_fav_obj'>
+		<p><span class='metadata_name'>favorite object: </span><a href='{{page.fav_object_url}}' target='blank'>{{page.fav_object}}</a></p>
+	</div>
+	<div class='layout_content'>
+		<img src='/archive_screens/{{page.screenshot}}'>
+		<span class='image_span'><span class='metadata_name'>visited: </span>{{page.visited}}</span>
+	</div>
+	<div class='layout_content'>
+		<div class='layout_metadata'>
+		<p><span class='metadata_name'>location: </span>{{page.location}}</p>
+		{{page.map}}
+	</div>
+	</div>
+</div>
+
+

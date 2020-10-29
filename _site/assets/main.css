@@ -165,7 +165,11 @@ table td { border: 1px solid #effcfa; }
 
 .card h3 { line-height: 16pt; }
 
-.card p.fb_material { font-size: 10pt; line-height: 12pt; }
+.layout_container a { text-decoration: underline; }
+
+.layout_container .image_span { background-color: #fff; position: relative; bottom: 80px; left: 32px; padding: 8px; }
+
+#home_img { margin: auto; width: 100%; }
 
 /** Syntax highlighting styles */
 .highlight { background: #fff; }

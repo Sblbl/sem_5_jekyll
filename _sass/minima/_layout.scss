@@ -299,8 +299,23 @@
 		line-height: 16pt;
 	}
 
-	p.fb_material {
-		font-size: 10pt;
-		line-height: 12pt;
+}
+
+.layout_container {
+	a {
+		text-decoration: underline;
 	}
+
+	.image_span {
+		background-color: #fff;
+		position: relative;
+		bottom: 80px;
+		left: 32px;
+		padding: 8px;
+	}
+}
+
+#home_img {
+	margin: auto;
+	width: 100%;
 }

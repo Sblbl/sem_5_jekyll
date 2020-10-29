@@ -1,0 +1,22 @@
+---
+layout: page
+title: Archives
+permalink: /archives/
+---
+
+Here you can find the collection of interesting archives.
+
+{% for archive in site.archives %}
+
+<a href='{{ archive.url }}'>
+	<div class='card'>
+		<h3>{{ archive.name }}</h3>
+		<p class='fb_material'>{{ archive.location }}</p>
+	</div>
+</a>
+
+{% else %}
+
+<p>Anything found</p>
+
+{% endfor %}
