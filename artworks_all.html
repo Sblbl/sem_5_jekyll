@@ -1,0 +1,25 @@
+---
+layout: page
+title: Artworks
+permalink: /artworks/
+---
+<div>
+Here you can find the collection of different styles of Chinese fine art from research project to unlock insights through algorithm whats behind these greatest art works from 200 years Chinese history and forward.
+The complete dataset can be found <a href='https://www.kaggle.com/rickyjli/chinese-fine-art'>here</a>
+</div>
+<div class='pages_container'>
+{% for artist in site.data.artists %}
+	<h3>{{ artist.ChineseName }} - {{ artist.EnglishName }}</h3>
+	<p class='fb_material'>{{ artist.Nationality }}</p>	
+	{% if artist.DeathYear == blank %}
+		<p class='fb_material'>{{ artist.BirthYear }}</p>
+	{% else %}
+		<p class='fb_material'>{{ artist.BirthYear }} - {{ artist.DeathYear }}</p>
+	{% endif %}
+{% else %}
+
+<p>Anything found</p>
+
+{% endfor %}
+
+</div>
