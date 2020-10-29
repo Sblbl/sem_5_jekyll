@@ -159,9 +159,9 @@ table td { border: 1px solid #effcfa; }
 .post-content a { color: #23d9bc; }
 
 /** Fingerboards */
-.card { width: 32%; padding: 16px; background-color: #effcfa; display: inline-block; margin-bottom: 16px; }
+.card { width: 100%; padding: 16px; background-color: #effcfa; display: inline-block; margin-bottom: 16px; }
 
-.card img { object-fit: contain; object-position: center; width: calc(32%-32px); height: calc(32%-32px); }
+.card img { width: 32%; height: 32%; vertical-align: text-top; }
 
 .card h3 { line-height: 16pt; }
 

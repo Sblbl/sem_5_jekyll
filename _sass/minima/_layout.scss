@@ -283,17 +283,16 @@
  */
 
 .card {
-	width: 32%;
+	width: 100%;
 	padding: 16px;
 	background-color: $grey-color-light;
 	display: inline-block;
 	margin-bottom: 16px;
 
 	img {
-		object-fit: contain; 
-		object-position: center;
-		width: calc(32%-32px);
-		height: calc(32%-32px);
+		width: 32%;
+		height: 32%;
+		vertical-align: text-top;
 	}
 
 	h3 {

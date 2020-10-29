@@ -9,17 +9,31 @@ The complete dataset can be found <a href='https://www.kaggle.com/rickyjli/chine
 </div>
 <div class='pages_container'>
 {% for artist in site.data.artists %}
-	<h3>{{ artist.ChineseName }} - {{ artist.EnglishName }}</h3>
-	<p class='fb_material'>{{ artist.Nationality }}</p>	
-	{% if artist.DeathYear == blank %}
-		<p class='fb_material'>{{ artist.BirthYear }}</p>
-	{% else %}
-		<p class='fb_material'>{{ artist.BirthYear }} - {{ artist.DeathYear }}</p>
-	{% endif %}
+	<div class='card'>
+		<h3>{{ artist.ChineseName }} - {{ artist.EnglishName }}</h3>
+		<p class='fb_material'>{{ artist.Nationality }}</p>	
+		{% if artist.DeathYear == nil or artist.DeathYear == nil or artist.DeathYear == blank %}
+			<p class='fb_material'>{{ artist.BirthYear }}</p>
+		{% else %}
+			<p class='fb_material'>{{ artist.BirthYear }} - {{ artist.DeathYear }}</p>
+		{% endif %}
+		<div class='img_container'>
+			{% assign e_name = artist.EnglishName | replace: ' ', '_' %}
+			{% assign c_name = artist.ChineseName | prepend: '_' %}
+			{% assign f_name = e_name | append: c_name %}
+			<p>{{ f_name }}</p>
+			{% for img in site.static_files %}	
+				{% if img.path contains e_name %}
+				<img src='{{ img.path }}'/>
+				{% endif %}
+				<!-- <img src='{{ site.baseurl }}{{ img.path }}' /> -->
+			{% else %}
+			<p>No image found</p>
+			{% endfor %}
+		</div>
+	</div>
+
 {% else %}
-
 <p>Anything found</p>
-
 {% endfor %}
-
 </div>
